@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Consulta{% endblock  %}
+
+{% block content %}
+<section class="page-section">
+        <div class="container">
+            {% for columna in columnas %}
+                {% for c in columna %}
+                <td scope="row">
+                {{c}}
+                <br>
+                </td>
+                {% endfor %}
+            {% endfor %}        
+        </div>
+</section>
+
+
+{% endblock %}

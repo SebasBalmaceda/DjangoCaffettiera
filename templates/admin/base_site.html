@@ -1,0 +1,78 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle %}
+<style>
+    #header{
+        background: #4c2d1b;
+    }
+    #content{
+        background:#FAFCB7; 
+    }
+    #container{
+        background:#FAFCB7;
+    }
+    .module caption{
+        background: #4c2d1b;
+    }
+    #content-main{
+        background:#FAFCB7;
+    }
+    .module{
+        background:#D5FAA9;
+    }
+    h1{
+        color: #4c2d1b;
+        font-weight: bold;
+    }
+    #content-related .module h2 {
+        background:#4c2d1b;
+        color:#FFFF;
+        font-size:18px;
+        }
+
+    #content-related .module {
+        background:#D5FAA9;
+    }
+    #content-related {
+        background:#D5FAA9;
+    }
+    a:link, a:visited {
+        color:#4c2d1b;
+        text-decoration:none;
+    }
+    div.breadcrumbs {
+        background:#4c2d1b;
+        border:none;
+        color:#FDCFA1;
+        }
+    #body{
+        background:#FAFCB7;
+        }
+    #footer{
+        background:#4c2d1b; 
+    }    
+    .button, input[type="submit"], input[type="button"], .submit-row input, a.button {
+        background:#4c2d1b;
+        border:none;
+         border-radius:4px;
+        color:#FFFFFF;
+        cursor:pointer;
+        padding:10px 15px;
+    }
+  
+    
+</style>
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            <img src="{% static 'logo.png' %}" height="50px">
+        </a>
+    </h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

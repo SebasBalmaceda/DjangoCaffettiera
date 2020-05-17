@@ -1,0 +1,6 @@
+site_name: web caffettiera
+nav:
+    - Home: index.md
+    - About: about.md
+theme:
+    name: readthedocs
